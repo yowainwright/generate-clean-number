@@ -1,0 +1,18 @@
+{
+  "name": "generate-clean-number",
+  "version": "0.0.1",
+  "description": "A JavaScript utility for removing anything that is not a number (NaN) from a number",
+  "main": "index.js",
+  "repository": "git@github.com:yowainwright/generate-clean-number.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "markdown-spellcheck": "^1.3.1",
+    "markdownlint-cli": "^0.13.0",
+    "ts-jest": "^23.10.5",
+    "ts-lint": "^4.5.1",
+    "typescript": "^3.3.1",
+    "write-good": "^1.0.1"
+  }
+}
