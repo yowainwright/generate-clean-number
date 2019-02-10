@@ -16,7 +16,9 @@
     "write-good": "^1.0.1"
   },
   "scripts": {
+    "build": "tsc index.ts",
+    "lint": "",
     "start": "npm install",
-    "build": "tsc index.ts"
+    "test": "jest"
   }
 }
