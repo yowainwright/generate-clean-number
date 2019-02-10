@@ -21,6 +21,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-  }
+    "emitDecoratorMetadata": true, 
+  },
+  "exclude": [
+    "__tests__/**"
+  ]
 }

@@ -12,11 +12,11 @@
     "markdownlint-cli": "^0.13.0",
     "ts-jest": "^23.10.5",
     "ts-lint": "^4.5.1",
-    "typescript": "^3.3.1",
+    "typescript": "^3.3.3",
     "write-good": "^1.0.1"
   },
   "scripts": {
-    "build": "tsc index.ts",
+    "build": "tsc",
     "lint": "",
     "start": "npm install",
     "test": "jest"
