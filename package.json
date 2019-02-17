@@ -21,5 +21,9 @@
     "lint": "tslint -c tslint.json .",
     "start": "npm install",
     "test": "jest"
-  }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ]
 }
