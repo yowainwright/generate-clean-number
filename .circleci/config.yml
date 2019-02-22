@@ -39,6 +39,7 @@ jobs:
       - checkout
       - *restore_cache
       - run: yarn test
+      - run: npx codecov
 
 workflows:
   version: 2
