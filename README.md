@@ -49,5 +49,12 @@ const nowCleanNumber = filterNaNfromNumber(<someNumber>)
 
 Generate Clean Number solves extra characters that are sometimes added (unknowingly) to numbers when being manipulated while doing date operations or stuff like that. 
 
-Here's an example of what this number could look like, `~^12`. Here's what Generate Clean Number will make it look like, `12`. 
+Here's an example of what this number **could** look like, `~^12`. Here's what Generate Clean Number **will make** it look like, `12`. 
+
+### Real world issues Generate Clean Number helps
+
+Listed below are a few real world examples that generate clean number might help with.
+
+- [IEs tolocalestring has strange characters in results](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
+- [Date format has invisible characters in IE11](https://github.com/yahoo/react-intl/issues/201)
 
