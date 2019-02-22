@@ -9,7 +9,7 @@ exports.filterNaNfromNumber = function (num) {
     if (typeof num === 'number')
         return num;
     var numArray = num.split('');
-    var filteredNumArray = numArray.filter(function (char) { return typeof char === 'number'; });
+    var filteredNumArray = numArray.filter(function (char) { return !isNaN(char); });
     var filteredNumString = filteredNumArray.join('');
     return parseInt(filteredNumString, 10);
 };
