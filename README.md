@@ -1,6 +1,6 @@
 # Generate Clean Number #️⃣🖌
 
-[![CircleCI](https://circleci.com/gh/yowainwright/generate-clean-number.svg?style=svg)](https://circleci.com/gh/yowainwright/generate-clean-number)
+[![CircleCI](https://circleci.com/gh/yowainwright/generate-clean-number/tree/master.svg?style=svg)](https://circleci.com/gh/yowainwright/generate-clean-number/tree/master)
 
 
 A JavaScript utility for removing anything that is not a number ([NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)) from a number.
@@ -40,4 +40,12 @@ import {
 const nowCleanNumber = filterNaNfromNumber(<someNumber>) 
 
 ```
+
+----
+
+## Examples of what Generate Clean Number Solves
+
+Generate Clean Number solves extra characters that are sometimes added (unknowingly) to numbers when being manipulated while doing date operations or stuff like that. 
+
+Here's an example of what this number could look like, `~^12`. Here's what Generate Clean Number will make it look like, `12`. 
 
