@@ -9,3 +9,35 @@ There are situations, particularly with [Intl](https://developer.mozilla.org/en-
 
 ----
 
+## Usage
+
+Generate Clean Number provides 2 methods for generating a clean number (removing unwanted characters).
+
+### `generateCleanNumber`
+
+`generateCleanNumber` uses regex to remove unwanted characters from numbers. Just a ternary but may be less performant if many numbers are being trimmed.
+
+```javascript
+
+import {
+  generateCleanNumber
+} from 'generate-clean-number'
+
+const nowCleanNumber = generateCleanNumber(<someNumber>) 
+
+```
+
+### `filterNaNfromNumber`
+
+`filterNaNfromNumber` turns a number into an array and strips non-number characters from it before returning a number. 
+
+```javascript
+
+import {
+  filterNaNfromNumber
+} from 'generate-clean-number'
+
+const nowCleanNumber = filterNaNfromNumber(<someNumber>) 
+
+```
+
