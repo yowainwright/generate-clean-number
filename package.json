@@ -22,7 +22,7 @@
     "ts-check": "tsc --noEmit",
     "tslint": "tslint -c tslint.json .",
     "start": "npm install",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "files": [
     "index.js",

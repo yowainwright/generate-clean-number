@@ -1,6 +1,7 @@
 # Generate Clean Number #️⃣🖌
 
 [![CircleCI](https://circleci.com/gh/yowainwright/generate-clean-number.svg?style=svg)](https://circleci.com/gh/yowainwright/generate-clean-number) [![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/generate-clean-number.svg?token=9e6575aeed4d6312e467055cb1908beebbac5314e2c55a5dd4437417e5631cde&ts=1550802853168)](https://greenkeeper.io/)
+[![codecov](https://codecov.io/gh/yowainwright/generate-clean-number/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/generate-clean-number)
 
 
 
