@@ -1,6 +1,6 @@
 {
   "name": "generate-clean-number",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A JavaScript utility for removing anything that is not a number (NaN) from a number",
   "main": "index.js",
   "repository": "git@github.com:yowainwright/generate-clean-number.git",
@@ -21,6 +21,13 @@
   },
   "scripts": {
     "build": "tsc",
+    "chore:delete-changelog-branch": "if git show-ref --quiet refs/heads/chore-changelog; then git branch -D chore-changelog; fi",
+    "chore:branch": "git checkout -b chore-changelog",
+    "chore:changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0",
+    "chore:setup-next-work": "git checkout master && npm run chore:delete-changelog-branch",
+    "chore:pr": "git add . && git commit -m '[chore] updates changelog' --no-verify && git push origin chore-changelog -f",
+    "chore:setup-changelog": "git checkout master && git pull",
+    "chore": "npm run chore:delete-changelog-branch && npm run chore:branch && npm run chore:changelog && npm run chore:pr && npm run chore:setup-next-work",
     "markdownlint": "markdownlint *.md",
     "prepush": "npm run build && npm test",
     "pre-commit-msg": "Echo 'Running pre-commit checks...' && exit 0",
