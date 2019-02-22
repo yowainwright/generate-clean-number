@@ -7,7 +7,7 @@ export const generateCleanNumber = (num: any): number => {
 export const filterNaNfromNumber = (num: any): number => {
   if (typeof num === 'number') return num 
   const numArray: [] = num.split('')
-  const filteredNumArray = numArray.filter((char: number) => typeof char === 'number')
+  const filteredNumArray = numArray.filter((char: number) => !isNaN(char))
   const filteredNumString = filteredNumArray.join('')
   return parseInt(filteredNumString, 10)
 }

@@ -32,7 +32,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: yarn lint
+      - run: yarn tslint
   test:
     <<: *defaults
     steps:

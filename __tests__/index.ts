@@ -1,7 +1,7 @@
 import {
   generateCleanNumber,
-  filterNaNfromNumber.
-} from '..'
+  filterNaNfromNumber,
+} from '../index'
 
 const scenarios = [
   {
