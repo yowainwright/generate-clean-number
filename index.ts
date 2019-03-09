@@ -1,13 +1,13 @@
 export const generateCleanNumber = (num: any): number => {
   return isNaN(num)
-  ? parseInt(num.toString().replace(/[^0-9]/g, ''), 10)
-  : num
+  ? parseFloat(num.toString().replace(/[^0-9,.]/g, ""))
+    : parseFloat(num)
 }
 
 export const filterNaNfromNumber = (num: any): number => {
-  if (typeof num === 'number') return num 
-  const numArray: [] = num.split('')
-  const filteredNumArray = numArray.filter((char: number) => !isNaN(char))
-  const filteredNumString = filteredNumArray.join('')
-  return parseInt(filteredNumString, 10)
+  if (typeof num === 'number') return num
+  const numArray: string[] = num.split("")
+  const filteredNumArray = numArray.filter((char: string) => !isNaN(parseInt(char, 10)) || char === ".")
+  const filteredNumString = filteredNumArray.join("")
+  return parseFloat(filteredNumString)
 }
