@@ -26,29 +26,13 @@ jobs:
       - *restore_cache
       - run: yarn
       - run: yarn build
-      - *save_cache
-  lint:
-    <<: *defaults
-    steps:
-      - checkout
-      - *restore_cache
       - run: yarn tslint
-  test:
-    <<: *defaults
-    steps:
-      - checkout
-      - *restore_cache
       - run: yarn test
       - run: npx codecov
+      - *save_cache
 
 workflows:
   version: 2
   all:
     jobs:
       - build
-      - lint:
-          requires:
-            - build
-      - test:
-          requires:
-            - build
