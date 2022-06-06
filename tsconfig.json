@@ -1,29 +1,19 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",   
-    "lib": [
-      "es6",
-      "es2016.array.include",
-      "es2017",
-      "dom"
-    ],
+    "module": "commonjs",
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "rootDir": ".", 
-    "removeComments": true, 
+    "rootDir": ".",
+    "removeComments": true,
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "moduleResolution": "node",
-    "baseUrl": ".", 
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true, 
+    "emitDecoratorMetadata": true
   },
-  "exclude": [
-    "__tests__/**"
-  ]
+  "exclude": ["index.test.ts"]
 }
