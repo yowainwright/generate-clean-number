@@ -1,6 +1,6 @@
 {
   "name": "generate-clean-number",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A JavaScript utility for removing anything that is not a number (NaN) from a number",
   "main": "index.cjs",
   "module": "index.js",
