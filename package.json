@@ -2,7 +2,15 @@
   "name": "generate-clean-number",
   "version": "3.0.2",
   "description": "A JavaScript utility for removing anything that is not a number (NaN) from a number",
-  "main": "index.js",
+  "main": "index.cjs",
+  "module": "index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
   "repository": "git@github.com:yowainwright/generate-clean-number.git",
   "author": "Jeff Wainwright <yowainwright@gmail.com>",
   "license": "MIT",
@@ -14,18 +22,19 @@
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "release-it": "^15.0.0",
+    "tsup": "^6.1.3",
     "typescript": "^4.3.5",
     "vitest": "^0.16.0"
   },
   "scripts": {
-    "build": "tsc",
-    "prepush": "npm run build && npm test",
-    "prepublishOnly": "npm run build && npm run lint && npm run test",
+    "build": "tsup index.ts --format esm,cjs --dts --outDir .",
+    "prepush": "pnpm build && npm test",
+    "prepublishOnly": "pnpm build && pnpm lint && pnpm test",
     "release": "release-it",
     "report:coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "ts-check": "tsc --noEmit",
     "lint": "eslint index.ts",
-    "start": "npm install",
+    "start": "pnpm install",
     "test": "vitest run"
   },
   "files": [
