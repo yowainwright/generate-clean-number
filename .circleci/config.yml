@@ -13,6 +13,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
+      - run: npm install pnpm -g
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm run lint
