@@ -12,14 +12,12 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - *restore_cache
       - run: npm install pnpm -g
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm run lint
       - run: pnpm run test
       - run: npx codecov
-      - *save_cache
 
 workflows:
   version: 2
